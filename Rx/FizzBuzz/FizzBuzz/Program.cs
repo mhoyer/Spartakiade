@@ -18,8 +18,15 @@ namespace FizzBuzz
             // short way
             var generator = Observable
                 .Range(0, 100)
-                .Where(x => x%3 == 0)
-                .Select(x => "Fizz")
+                .Select(
+                    x =>
+                        {
+                            if (x % 15 == 0) return "FizzBuzz";
+                            if (x % 3 == 0) return "Fizz";
+                            if (x % 5 == 0) return "Buzz";
+
+                            return x.ToString();
+                        })
                 .Do(Console.Write);
 
             generator.Subscribe();
