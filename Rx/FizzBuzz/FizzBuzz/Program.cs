@@ -27,7 +27,7 @@ namespace FizzBuzz
 
                             return x.ToString();
                         })
-                .Do(Console.Write);
+                .Do(Console.WriteLine);
 
             generator.Subscribe();
 
