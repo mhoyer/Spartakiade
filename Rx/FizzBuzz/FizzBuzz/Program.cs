@@ -16,11 +16,13 @@ namespace FizzBuzz
             producer.Produce();
             
             // short way
-            Observable
+            var generator = Observable
                 .Range(0, 100)
                 .Where(x => x%3 == 0)
                 .Select(x => "Fizz")
-                .Subscribe(Console.Write);
+                .Do(Console.Write);
+
+            generator.Subscribe();
 
             Console.ReadKey();
         }
