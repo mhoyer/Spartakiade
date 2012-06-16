@@ -8,7 +8,7 @@ namespace FizzBuzz
 
         public void Produce()
         {
-            for (int i = 0; i < 100; i++)
+            for (int i = 0; i <= 100; i++)
             {
                 if (OnNumber == null) continue;
                 OnNumber(i);
