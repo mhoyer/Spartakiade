@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reactive.Linq;
 
 namespace FizzBuzz
 {
@@ -14,6 +15,11 @@ namespace FizzBuzz
             observer.Subscribe(consumer);
             producer.Produce();
             
+            // short way
+            Observable
+                .Range(0, 100)
+                .Subscribe(Console.Write);
+
             Console.ReadKey();
         }
     }
