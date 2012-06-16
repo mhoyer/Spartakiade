@@ -18,6 +18,8 @@ namespace FizzBuzz
             // short way
             Observable
                 .Range(0, 100)
+                .Where(x => x%3 == 0)
+                .Select(x => "Fizz")
                 .Subscribe(Console.Write);
 
             Console.ReadKey();
