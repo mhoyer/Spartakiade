@@ -22,9 +22,9 @@ namespace FizzBuzz
                 .Select(
                     x =>
                         {
-                            if (x % 15 == 0) return "FizzBuzz";
-                            if (x % 3 == 0) return "Fizz";
-                            if (x % 5 == 0) return "Buzz";
+                            if (x%15 == 0) return "FizzBuzz";
+                            if (x%3 == 0) return "Fizz";
+                            if (x%5 == 0) return "Buzz";
 
                             return x.ToString();
                         })
