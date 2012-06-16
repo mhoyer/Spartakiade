@@ -1,2 +1,2 @@
-Spartakiade
+Spartakiade - Training results
 ===========
