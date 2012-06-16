@@ -17,7 +17,8 @@ namespace FizzBuzz
             
             // short way
             var generator = Observable
-                .Range(0, 100)
+                //.Range(0, 100)
+                .Generate(0, x => x < 100, x => x + 1, x => x, x => TimeSpan.FromSeconds(1))
                 .Select(
                     x =>
                         {
